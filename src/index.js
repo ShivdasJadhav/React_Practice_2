@@ -1,12 +1,10 @@
 import React from "react";
 import reactDom from "react-dom";
-import LoginForm from "./LoginForm.jsx";
-import SecretePage from "./SecretePage";
+import { BrowserRouter as Router } from "react-router-dom";
+import App from "./App";
 reactDom.render(
-  <div className="container">
-    <div className="main">
-      <LoginForm/>
-    </div>
-  </div>,
+  <Router>
+  <App/>
+  </Router>,
   document.getElementById("root")
 );
