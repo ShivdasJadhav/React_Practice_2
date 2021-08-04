@@ -27,10 +27,16 @@ function chacking() {
     alert("A Proper Password is Required");
   } else if (email === "") {
     alert("Email Adress is Must!!");
-  } 
+  } else {
+    submit();
+  }
+}
+function submit() {
+  let User_name = document.getElementById("name").value;
+  let pass = document.getElementById("password").value;
+  let email = document.getElementById("email").value;
   let array = [User_name, pass, email];
   localStorage.setItem("user_info", array);
-  alert("Are sure with these login Creditionals ?");
   refreshPage();
 }
 function refreshPage() {
