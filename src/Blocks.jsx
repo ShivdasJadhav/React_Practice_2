@@ -60,4 +60,8 @@ export default Block_One;
 const logout=()=>{
     localStorage.removeItem("user_info");
     alert("logout succesfully");
+    refreshPage();
 }
+function refreshPage(){
+    window.location.reload();
+} 
