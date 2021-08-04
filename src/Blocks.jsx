@@ -59,7 +59,7 @@ function Block_One(){
 export default Block_One;
 const logout=()=>{
     localStorage.removeItem("user_info");
-    alert("logout succesfully");
+    alert("Are you sure about getting logout ?");
     refreshPage();
 }
 function refreshPage(){
