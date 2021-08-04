@@ -12,6 +12,7 @@ import mars_undergrounds from "./images/mars_undergrounds.jpg";
 function Block_One(){
         return(
         <div className="blocks_container">
+            <header><button id="logout" onClick={logout}>LogOut</button></header>
             <div className="blocks">
                 <img src={age_of_Ai}  alt="Ai" />
                 <h3>The Age of Artificial intellegence</h3>
@@ -56,3 +57,7 @@ function Block_One(){
     );
 }
 export default Block_One;
+const logout=()=>{
+    localStorage.removeItem("user_info");
+    alert("logout succesfully");
+}

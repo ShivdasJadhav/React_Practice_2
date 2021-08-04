@@ -1,13 +1,21 @@
-import Login from "./LoginForm.jsx";
+import User_Login from "./LoginForm.jsx";
 import SecretePage from "./SecretePage";
-import { Switch,Route } from "react-router";
-import Login from "./LoginForm.jsx";
-function App(){
-    return(
+import { Switch, Route, Redirect } from "react-router-dom";
+function App() {
+  {
+    if (localStorage.getItem("user_info")) {
+      return (
         <Switch>
-            <Route path="/User_Login"  ><Login/></Route>
-            <Route path="/secrete" ><SecretePage/></Route>
+          <Route component={SecretePage} />
         </Switch>
-    );
+      );
+    } else {
+      return (
+        <Switch>
+          <Route component={User_Login} />
+        </Switch>
+      );
+    }
+  }
 }
 export default App;
